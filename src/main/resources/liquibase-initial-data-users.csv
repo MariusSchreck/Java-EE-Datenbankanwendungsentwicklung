@@ -1,0 +1,3 @@
+ID,CREATED,EMAIL,FIRST_NAME,LAST_NAME,LOCATION,PASSWORD,PHONE
+1,2019-11-21 18:12:37,'user@something.com',Jonas,Whoknows,Darmstadt,test123,0177812949872
+2,2019-11-21 18:12:37,'user@something.com',TEST,Whoknows,Darmstadt,test123,0177812949872

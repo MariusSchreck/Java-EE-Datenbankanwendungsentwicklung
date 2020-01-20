@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="stmascre" id="InsertInitialDataNotepad">
+        <loadData encoding="UTF-8"
+                  file="liquibase-initial-data-notepad.csv"
+                  relativeToChangelogFile="true"
+                  quotchar="'"
+                  separator=","
+                  tableName="NOTEPAD">
+
+            <column name="ID" type="NUMERIC" />
+            <column name="USER_ID" type="NUMERIC" />
+            <column name="AD_ID" type="NUMERIC" />
+            <column name="NOTE" type="STRING"/>
+            <column name="CREATED" type="DATE"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

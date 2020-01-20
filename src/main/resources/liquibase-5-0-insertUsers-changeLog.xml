@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet author="stmascre"
+               id="loadData-Insert-users">
+    <loadData encoding="UTF-8"
+              file="liquibase-test-data-users.csv"
+              relativeToChangelogFile="true"
+              quotchar="'"
+              separator=","
+              tableName="USER">
+
+        <column name="ID" type="NUMERIC" />
+        <column name="CREATED" type="DATE" />
+        <column name="EMAIL" type="STRING" />
+        <column name="FIRST_NAME" type="STRING"/>
+        <column name="LAST_NAME" type="STRING"/>
+        <column name="LOCATION" type="STRING"/>
+        <column name="PASSWORD" type="STRING" />
+        <column name="PHONE" type="STRING"/>
+    </loadData>
+    </changeSet>
+
+
+</databaseChangeLog>

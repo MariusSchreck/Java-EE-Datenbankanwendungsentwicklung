@@ -1,0 +1,6 @@
+ID,CREATED,DESCRIPTION,LOCATION,PRICE,TITLE,TYPE,CATEGORY_ID,USER_ID
+1,2019-11-21 18:12:37,'Testeintrag1',Testlocation,60.00,'3 Zimmer, 75qm',Offer,5,2
+2,2019-11-20 18:12:37,'Studentenwohnung fuer guenstig',Darmstadt,100.00,'2 Zimmer, 40m²',Offer,5,2
+3,2019-10-18 10:12:37,'Dringend wohnung in Darmstadt gesucht',Darmstadt,NULL,'Dringend wohnung gesucht',Request,5,2
+4,2019-09-18 10:12:37,'....',Weiterstadt,NULL,'Auf der Wohnungssuche!',Request,5,2
+5,2019-08-18 10:12:37,'....',Frankfurt,750.00,'Alte Laptops für arme Studenten',Offer,5,2

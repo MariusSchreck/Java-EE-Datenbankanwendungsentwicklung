@@ -1,0 +1,7 @@
+ID,NAME,PARENT_ID
+1,Immobilien,NULL
+2,Wohnungssuche,1
+3,Geräte,NULL
+4,Smartphone,3
+5,Notebook,3
+4711,Garten,NULL

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="liquibase-docs" id="addColumn-example">
+        <addColumn tableName="AD">
+            <column name="DTYPE" type="varchar(31)" defaultValue="Request">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="Marius" id="ChangeDTYPE">
+        <update tableName="AD">
+            <column name="DTYPE" type="varchar(31)" value="Offer"/>
+            <where>TYPE='Offer'</where>
+        </update>
+        <update tableName="AD">
+            <column name="DTYPE" type="varchar(31)" value="Request"/>
+            <where>TYPE='Request'</where>
+        </update>
+    </changeSet>
+    <changeSet author="liquibase-docs" id="Trigger" dbms="mysql">
+        <sql endDelimiter="/">
+            CREATE TRIGGER DTYPE BEFORE INSERT ON AD
+            FOR EACH ROW BEGIN
+            SET NEW.DTYPE = NEW.TYPE;
+            END;
+            /
+        </sql>
+    </changeSet>
+</databaseChangeLog>

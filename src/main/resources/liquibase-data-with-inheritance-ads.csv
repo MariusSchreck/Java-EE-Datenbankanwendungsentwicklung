@@ -1,0 +1,5 @@
+ID,CREATED,DESCRIPTION,LOCATION,PRICE,TITLE,TYPE,CATEGORY_ID,USER_ID
+6,2019-11-21 19:12:37,'Testeintrag6',Testlocation6,1000.00,'5 Zimmer, 705qm',Offer,5,2
+7,2019-11-20 20:12:37,'Schoene Wohnung',Frankfurt,500.66,'6 Zimmer, 140m²',Offer,5,2
+8,2019-11-20 20:12:37,'Test8','Muenchen',NULL,'1 Zimmer- 140²',Request,5,2
+9,2019-11-20 20:12:37,'Test9','Berlin',NULL,'2 Zimmer- 10m²',Request,5,2

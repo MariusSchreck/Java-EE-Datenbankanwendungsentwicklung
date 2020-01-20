@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="Marius" id="AdvertismentDataWithDTYPE">
+            <loadData encoding="UTF-8"
+                      file="liquibase-data-with-inheritance-ads.csv"
+                      relativeToChangelogFile="true"
+                      quotchar="'"
+                      separator=","
+                      tableName="AD">
+                <column name="ID" type="NUMERIC" />
+                <column name="CREATED" type="DATE" />
+                <column name="DESCRIPTION" type="STRING" />
+                <column name="LOCATION" type="STRING"/>
+                <column name="PRICE" type="NUMERIC"/>
+                <column name="TITLE" type="STRING" />
+                <column name="TYPE" type="STRING" />
+                <column name="CATEGORY_ID" type="NUMERIC" />
+                <column name="USER_ID" type="NUMERIC" />
+            </loadData>
+    </changeSet>
+</databaseChangeLog>

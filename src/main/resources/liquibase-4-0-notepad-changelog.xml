@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="Marius, Ingo, Aleks" id="create-notepad">
+        <createTable tableName="NOTEPAD">
+            <column name="ID" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="USER_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AD_ID" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOTE" type="VARCHAR(255)"/>
+            <column name="CREATED" type="datetime(6)" defaultValueComputed="NOW(6)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="Marius, Ingo, Aleks" id="Notepad-FK-USER_ID">
+        <addForeignKeyConstraint baseColumnNames="USER_ID" baseTableName="NOTEPAD" constraintName="USER-ID-FK" deferrable="false" initiallyDeferred="false" referencedColumnNames="ID" referencedTableName="USER"/>
+    </changeSet>
+    <changeSet author="Marius, Ingo, Aleks" id="Notepad-FK-AD_ID">
+        <addForeignKeyConstraint baseColumnNames="AD_ID" baseTableName="NOTEPAD" constraintName="AD-ID-FK" deferrable="false" initiallyDeferred="false" referencedColumnNames="ID" referencedTableName="AD"/>
+    </changeSet>
+</databaseChangeLog>
